@@ -1,0 +1,135 @@
+{% extends 'SProvider/design1.html' %}
+{% block researchblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+        .style7 {color: #FFFF00}
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p align="center" class="text-uppercase pull-center style1">View All Kidney Disease Positive Details !!! </p>
+                            <hr>
+                            <div  class="tweettext">
+                                  <table border="5" bordercolor="#FF00FF">
+                              <tr><td bgcolor="#FF0000"><span class="style8 style6">id</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">age</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">bp</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">sg</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">al</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">su</span></td>
+                                <td bgcolor="#FF0000"><span class="style8 style6">rbc</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">pc</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">pcc</span></td>
+                                <td bgcolor="#FF0000"><span class="style8 style6">ba</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">bgr</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">bu</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">sc</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">sod</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">pot</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">hemo</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">pcv</span></td>
+                                  <td bgcolor="#FF0000"><span class="style8 style6">wc</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">rc</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">htn</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">dm</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">cad</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">appet</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">pe</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">ane    </span></td>
+                                  <td bgcolor="#FF0000"><span class="style8 style6">Disease Prediction</span></td>
+
+
+                      </tr>
+
+                            {% for object in objs %}
+                      <tr>
+
+
+
+                           <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.id1}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.age}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.bp}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.sg}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.al}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.su}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.rbc}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.pc}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.pcc}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.ba}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.bgr}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.bu}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.sc}}</div></td>
+                                <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.sod}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.pot}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.hemo}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.pcv}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.wc}}</div></td>
+                                <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.rc}}</div></td>
+                                <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.htn}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.dm}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.cad}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.appet}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.pe}}</div></td>
+                                <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.ane}}</div></td>
+                            <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.prediction}}</div></td>
+
+
+                        </tr>
+
+                                        {% endfor %}
+                      </table>
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>
